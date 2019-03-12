@@ -85,7 +85,7 @@ function csrfLogin (options) {
 
         var pageInfo = {
           method: form.attr('method'),
-          url: form.attr('action') || url,
+          url: /*form.attr('action') || */url, //BetDynamo forms have erroneous action
           csrf: csrf,
           csrfName: tokenName,
           headers: response.headers
